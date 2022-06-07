@@ -1,0 +1,99 @@
+.header {
+    background-color: $black;
+    width: 100%;
+
+    &__logo {
+        margin: 0 41px 0 0;
+        text-decoration: none;
+    }
+
+    &__logo:active {
+        opacity: 0.3;
+    }
+
+    &__search {
+        background: transparent;
+        fill: $nav-svg;
+        transition: fill 700ms;
+    }
+
+    &__search:hover,
+    &__search:focus {
+        cursor: pointer;
+        fill: $pink;
+    }
+
+    &__search:active {
+        opacity: 0.3;
+    }
+
+    &__button {
+        background-color: transparent;
+        border: 0;
+        fill: $nav-svg;
+        transition: fill 700ms;
+    }
+
+    &__button:focus,
+    &__button:hover {
+        cursor: pointer;
+        fill: $pink;
+    }
+
+    &__button:active {
+        opacity: 0.3;
+    }
+
+    &__link {
+        margin: 0 0 0 33px;
+        fill: $nav-svg;
+        text-decoration: none;
+        transition: fill 700ms;
+    }
+
+    &__link:hover,
+    &__link:focus {
+        cursor: pointer;
+        fill: $pink;
+    }
+
+    &__link:active {
+        opacity: 0.3;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+
+    &__menu {
+        background-color: #fff;
+        position: absolute;
+        display: none;
+    }
+
+    &__menu-title {
+        text-transform: uppercase;
+        @include font(14px, 17px, 700);
+    }
+
+    .menu-sub-item__title {
+        text-transform: uppercase;
+        @include font(14px, 17px);
+        color: $pink;
+    }
+
+    .menu-sub-item_item-link {
+        @include font(14px, 17px);
+        text-decoration: none;
+        color: #6F6E6E;
+    }
+
+    @media (max-width: $mobile-width) {
+        &__link {
+            display: none;
+        }
+    }
+}

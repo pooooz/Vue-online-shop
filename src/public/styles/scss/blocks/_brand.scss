@@ -1,0 +1,88 @@
+.brand {
+    display: flex;
+    margin: 0 0 63px;
+
+    &__title-wrp {
+        display: flex;
+        align-items: center;
+        padding: 0 0 0 92px;
+        background-color: $pink-bkg;
+        flex-grow: 1;
+    }
+
+    &__title {
+        @include font(48px, 58px, 900);
+        color: $black;
+        text-transform: uppercase;
+        position: relative;
+    }
+
+    &__title::before {
+        content: ' ';
+        width: 12px;
+        height: 100%;
+        background: $pink;
+        position: absolute;
+        left: -25px;
+    }
+
+    &__sub-title {
+        display: block;
+        @include font(32px, 38px, 700);
+    }
+
+    &__sub-title-pink {
+        color: $pink;
+    }
+
+    @media (max-width: $tablet-width) {
+        & {
+            margin: 0 0 20px;
+        }
+
+        &__img {
+            width: 50%;
+        }
+
+        &__title-wrp {
+            width: 50%;
+            min-height: 368px;
+        }
+
+        &__title {
+            @include font(44px, 50px, 900);
+        }
+
+        &__sub-title {
+            @include font(24px, 29px, 700);
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        & {
+            margin: 0 0 64px;
+        }
+
+        &__img {
+            display: none;
+        }
+
+        &__title {
+            @include font(38px, 56px, 900);
+        }
+
+        &__sub-title {
+            @include font(20px, 24px, 700);
+        }
+
+        &__title-wrp {
+            align-items: center;
+            padding: 0;
+            justify-content: center;
+        }
+
+        &__title::before {
+            left: -20px;
+        }
+    }
+}

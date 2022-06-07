@@ -1,0 +1,142 @@
+.dropdown-menu {
+    min-width: 7rem;
+}
+
+.dropdown-item {
+    color: #6F6E6E;
+    transition: color 500ms;
+}
+
+.dropdown-item:hover {
+    color: $pink;
+}
+
+.catalog-filters {
+    &__header {
+        display: none;
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    &__button {
+        width: 80px;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    &__menu-item {
+        cursor: pointer;
+        display: block;
+        text-transform: uppercase;
+        @include font(14px, 40px, 400);
+        color: #6F6E6E;
+        margin: 9px 0 9px 16px;
+        position: relative;
+        transition: color 600ms;
+        user-select: none;
+    }
+
+    &__menu-item-active {
+        color: $pink;
+    }
+
+    &__menu-item:hover {
+        color: $pink;
+    }
+
+    &__menu-item::before {
+        content: ' ';
+        width: 5px;
+        height: 100%;
+        background: $pink;
+        position: absolute;
+        left: -11px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        color: black;
+        @include font(14px, 17px, 700);
+        transition: color 700ms;
+    }
+
+    &__title-wrap:hover &__title {
+        color: $pink;
+    }
+
+    &__title-wrap:focus &__title,
+    &__title-wrap:active &__title {
+        color: $pink;
+    }
+
+    &__icon {
+        width: 15px;
+        height: 10px;
+        margin: 0 0 0 5px;
+        transition: fill 700ms;
+    }
+
+    &__title-wrap:hover &__icon {
+        fill: $pink;
+    }
+
+    &__title-wrap:focus &__icon,
+    &__title-wrap:active &__icon {
+        fill: $pink;
+    }
+
+    &__filter-menu {
+        min-width: 20rem;
+    }
+
+    &__sort-item {
+        margin: 0 0 0 30px;
+    }
+
+    &__sort-item .dropdown-toggle {
+        text-transform: uppercase;
+        color: #6F6E6E;
+        @include font(14px, 17px);
+        transition: color 700ms;
+    }
+
+    &__sort-item:hover .dropdown-toggle {
+        color: $pink;
+    }
+
+    &__sort-item .dropdown-toggle:focus,
+    &__sort-item .dropdown-toggle:active {
+        color: $pink;
+    }
+
+
+    @media (max-width: $tablet-width) {
+        &__wrap {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        &__title {
+            display: none;
+        }
+
+        &__icon {
+            width: 38px;
+            height: 25px;
+            margin: 0;
+        }
+
+        &__sort-item {
+            margin: 0 0 0 23px;
+        }
+
+        &__sort-item .dropdown-toggle {
+            @include font(12px, 15px);
+        }
+    }
+}

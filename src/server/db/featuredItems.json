@@ -1,0 +1,38 @@
+[
+  {
+    "id_product": 124,
+    "product_name": "ellery x m'o capsule windbreaker",
+    "price": 56,
+    "img": "../img/catalog/product-1.jpg"
+  },
+  {
+    "id_product": 457,
+    "product_name": "ellery x m'o capsule jacket",
+    "price": 43,
+    "img": "../img/catalog/product-2.jpg"
+  },
+  {
+    "id_product": 123,
+    "product_name": "ellery x m'o capsule hoodie",
+    "price": 26,
+    "img": "../img/catalog/product-3.jpg"
+  },
+  {
+    "id_product": 456,
+    "product_name": "ellery x m'o capsule trousers",
+    "price": 49,
+    "img": "../img/catalog/product-4.jpg"
+  },
+  {
+    "id_product": 779,
+    "product_name": "ellery x m'o capsule t-shirt",
+    "price": 21,
+    "img": "../img/catalog/product-5.jpg"
+  },
+  {
+    "id_product": 442,
+    "product_name": "ellery x m'o capsule cap",
+    "price": 22,
+    "img": "../img/catalog/product-6.jpg"
+  }
+]

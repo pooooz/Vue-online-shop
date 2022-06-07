@@ -1,0 +1,48 @@
+{
+  "amount": 306,
+  "countGoods": 7,
+  "contents": [
+    {
+      "quantity": 1,
+      "id_product": 442,
+      "product_name": "ellery x m'o capsule cap",
+      "price": 22,
+      "img": "../img/catalog/product-6.jpg"
+    },
+    {
+      "quantity": 1,
+      "id_product": 779,
+      "product_name": "ellery x m'o capsule t-shirt",
+      "price": 21,
+      "img": "../img/catalog/product-5.jpg"
+    },
+    {
+      "quantity": 1,
+      "id_product": 456,
+      "product_name": "ellery x m'o capsule trousers",
+      "price": 49,
+      "img": "../img/catalog/product-4.jpg"
+    },
+    {
+      "quantity": 1,
+      "id_product": 123,
+      "product_name": "ellery x m'o capsule hoodie",
+      "price": 26,
+      "img": "../img/catalog/product-3.jpg"
+    },
+    {
+      "quantity": 2,
+      "id_product": 457,
+      "product_name": "ellery x m'o capsule jacket",
+      "price": 43,
+      "img": "../img/catalog/product-2.jpg"
+    },
+    {
+      "quantity": 1,
+      "id_product": 438,
+      "product_name": "ellery x m'o capsule leather jacket",
+      "price": 102,
+      "img": "../img/catalog/product-8.jpg"
+    }
+  ]
+}

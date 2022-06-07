@@ -1,0 +1,183 @@
+.loyalty {
+    display: flex;
+    justify-content: space-between;
+    min-height: 675px;
+    padding: 64px 0 0 0;
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 360px;
+    }
+
+    &__legend {
+        @include font(16px, 19px, 300);
+        margin: 0 0 20px 0;
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__text-input {
+        min-height: 45px;
+        margin: 0 0 20px 0;
+        outline: 1px solid #A4A4A4;
+        padding: 0 0 0 16px;
+        border: none;
+        transition: outline-color 900ms;
+    }
+
+    &__text-input:hover,
+    &__text-input:focus {
+        outline: 2px solid $pink;
+    }
+
+
+    &__text-input::placeholder {
+        @include font(13px, 16px, 300);
+        color: #B1B1B1;
+    }
+
+    &__login {
+        display: flex;
+        flex-direction: column;
+        margin: 35px 0 0 0;
+    }
+
+    &__password-recomendation {
+        color: #B1B1B1;
+        @include font(13px, 16px, 300);
+        margin: 0 0 40px 0;
+    }
+
+    &__male,
+    &__female {
+        cursor: pointer;
+        margin: 0 0 0 30px;
+        @include font(13px, 13px, 300);
+        position: relative;
+    }
+
+    &__female {
+        margin: 0 0 0 50px;
+    }
+
+    &__gender-choice {
+        display: none;
+    }
+
+    &__male::before,
+    &__female::before {
+        cursor: pointer;
+        position: absolute;
+        content: '';
+        width: 17px;
+        height: 17px;
+        border: 1px solid #A4A4A4;
+        border-radius: 50%;
+        left: -30px;
+    }
+
+    &__gender-choice:checked+&__male::before,
+    &__gender-choice:checked+&__female::before {
+        border-color: $pink;
+        background-color: $pink;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+    }
+
+    &__button {
+        cursor: pointer;
+        width: 167px;
+        height: 50px;
+        text-transform: uppercase;
+        border: none;
+        color: #FFFFFF;
+        fill: #FFFFFF;
+        background: $pink;
+        transition: background-color 700ms, border 700ms, color 700ms, fill 700ms;
+    }
+
+    &__button:hover,
+    &__button:focus {
+        background-color: transparent;
+        border: 1px solid $pink;
+        color: $pink;
+        fill: $pink;
+    }
+
+    &__arrow {
+        margin: 0 0 0 20px;
+    }
+
+    &__perks {
+        max-width: 650px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        @include font(24px, 29px, 300);
+        margin: 0 0 22px 0;
+    }
+
+    &__description {
+        @include font(24px, 29px, 300);
+        margin: 0 0 20px 0;
+    }
+
+    &__item {
+        @include font(24px, 29px, 300);
+        margin: 0 0 16px 27px;
+        position: relative;
+    }
+
+    &__item::before {
+        content: '';
+        width: 16px;
+        height: 20px;
+        position: absolute;
+        top: 7px;
+        left: -25px;
+        background-image: url(../../img/check-mark.svg);
+        background-size: 16px 20px;
+    }
+
+    @media (max-width: $tablet-width) {
+        &__perks {
+            max-width: 354px;
+        }
+
+        &__title {
+            @include font(16px, 19px, 300);
+        }
+
+        &__description {
+            @include font(16px, 19px, 300);
+        }
+
+        &__item {
+            @include font(16px, 19px, 300);
+        }
+
+        &__item::before {
+            position: absolute;
+            top: 2px;
+            left: -25px;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        & {
+            flex-direction: column;
+        }
+
+        &__form {
+            width: 340px;
+        }
+
+        &__perks {
+            margin: 40px 0 100px 0;
+        }
+    }
+}

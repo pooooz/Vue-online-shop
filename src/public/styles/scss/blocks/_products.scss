@@ -1,0 +1,137 @@
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 96px;
+
+    &__title {
+        color: $black;
+        @include font(30px, 36px)
+    }
+
+    &__text {
+        color: $grey-text;
+        @include font(14px, 17px);
+        margin-top: 6px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: 48px;
+    }
+
+    &__item {
+        max-width: 360px;
+        margin-bottom: 30px;
+        background-color: $grey-bkg;
+    }
+
+    &__overlay {
+        position: relative;
+    }
+
+    &__overlay:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        top: 0;
+    }
+
+    &__add-button {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: 1px solid white;
+        @include flex-center;
+        padding: 5px 13px;
+        transition: background-color 700ms;
+    }
+
+    &__add-button:hover,
+    &__add-button:focus {
+        background: rgba(241, 128, 143, 0.2);
+    }
+
+    &__add-button:active {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &__add-link {
+        margin: 0 0 0 10px;
+        text-decoration: none;
+        @include font(14px, 17px);
+        color: $white-text;
+    }
+
+    &__overlay:before,
+    &__add-button {
+        display: none;
+    }
+
+    &__item:hover .products__overlay:before,
+    &__item:hover .products__add-button {
+        display: flex;
+    }
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        padding-left: 18px;
+    }
+
+    &__item-title {
+        text-transform: uppercase;
+        @include font(13px, 16px);
+        margin: 24px 0 0 0;
+    }
+
+    &__item-description {
+        color: #5D5D5D;
+        max-width: 314px;
+        @include font(14px, 17px, 300);
+        margin: 13px 0 0 0;
+    }
+
+    &__item-link {
+        color: $pink;
+        text-decoration: none;
+        @include font(16px, 19px);
+        margin: 18px 0 20px 0;
+    }
+
+    &__button {
+        width: 211px;
+        height: 47px;
+        color: $pink;
+        border: 1px solid #FF6A6A;
+        background-color: transparent;
+        @include font(16px, 19px);
+        margin: 10px 0 0 0;
+        transition: color 700ms, background-color 700ms;
+    }
+
+    &__button:hover,
+    &__button:focus {
+        color: #FFF;
+        background-color: $pink;
+        cursor: pointer;
+    }
+
+    &__button:active {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: $tablet-width) {
+        &__item {
+            margin-bottom: 16px;
+        }
+    }
+}

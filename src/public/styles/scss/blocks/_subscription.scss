@@ -1,0 +1,139 @@
+.subscription {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(../../img/subscription-bg.jpg);
+    background-size: cover;
+    height: 448px;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__review {
+        max-width: 360px;
+        text-align: center;
+    }
+
+    &__review-title {
+        display: none;
+    }
+
+    &__review-text {
+        margin-top: 30px;
+        @include font(20px, 24px, 400, italic);
+    }
+
+    &__form {
+        text-align: center;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        @include font(24px, 40px, 700);
+    }
+
+    &__sub-title {
+        text-transform: uppercase;
+        @include font(18px, 30px);
+    }
+
+    &__input {
+        margin: 32px 0 0 0;
+        border: none;
+        min-width: 256px;
+        min-height: 50px;
+        padding: 0 0 0 20px;
+        border-radius: 20px 0 0 20px;
+        background-color: #E1E1E1;
+        transition: outline 700ms;
+    }
+
+    &__input:hover,
+    &__input:focus {
+        outline: 1px solid $pink;
+    }
+
+    &__input:hover+&__button,
+    &__input:focus+&__button {
+        outline: 1px solid $pink;
+    }
+
+    &__input::placeholder {
+        color: $black;
+        @include font(14px, 17px);
+    }
+
+    &__button {
+        border: none;
+        min-width: 100px;
+        min-height: 50px;
+        border-radius: 0 20px 20px 0;
+        background-color: $pink;
+        color: #FFFFFF;
+        transition: outline 700ms;
+    }
+
+    &__button:hover,
+    &__button:active {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    &__button:active {
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: $tablet-width) {
+        & {
+            height: 614px;
+        }
+
+        &__wrap {
+            flex-direction: column;
+        }
+
+        &__review {
+            align-self: center;
+        }
+
+        &__form {
+            margin: 40px 0 0 0;
+        }
+
+        &__title {
+            @include font(24px, 36px, 700);
+        }
+
+        &__sub-title {
+            @include font(18px, 27px);
+        }
+
+        &__input {
+            margin: 27px 0 0 0;
+        }
+    }
+
+    @media (max-width: $mobile-width) {
+        &__title {
+            @include font(24px, 36px, 700);
+        }
+
+        &__sub-title {
+            @include font(14px, 21px);
+        }
+
+        &__form {
+            margin: 60px 0 0 0;
+        }
+
+        &__input {
+            min-width: 200px;
+        }
+
+        &__button {
+            min-width: 70px;
+        }
+    }
+}
